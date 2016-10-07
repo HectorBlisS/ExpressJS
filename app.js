@@ -10,9 +10,11 @@ var app = express();
 // 	response.end();
 // });
 
-app.get('/',function(request,response){
-	response.sendFile(__dirname+'/public/index.html');
-});
+// app.get('/',function(request,response){
+// 	response.sendFile(__dirname+'/public/index.html');
+// });
+
+app.use(express.static('public'));
 
 app.get('/bliss',function(request, response){
 	var bliss = ['Héctor', 'Feliciano','Campos', 'Muñoz'];
