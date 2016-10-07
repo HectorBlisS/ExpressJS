@@ -22,7 +22,19 @@ app.get('/bliss',function(request, response){
 });
 
 app.get('/bliss2',function(request, response){
-	var bliss = ['Héctor', 'Feliciano','Campos', 'Muñoz'];
+	var bliss = [{
+		nombre:'BlisS',
+		edad:29
+	},{
+		nombre:'Saul',
+		edad:15
+	},{
+		nombre:'Suriel',
+		edad:20
+	},{
+		nombre:'David',
+		edad:17
+	}]
 	response.json(bliss);
 });
 

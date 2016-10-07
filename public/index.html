@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>BlisS</title>
+</head>
+<body>
+	<h1>mijos</h1>
+	<ul id="lista">
+	</ul>
+
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+(function(){
+	$.get('/bliss',parsear);
+
+
+	function parsear(response){
+		console.log(response);
+		for (let name of response ){
+			$('#lista').append('<li>'+name+'</li>');
+			
+		}
+	}
+})();
+
+</script>
+</body>
+</html>
