@@ -45,6 +45,7 @@ app.get('/bliss2',function(request, response){
 	response.json(bliss);
 });
 
+
 app.get('/topten',function(req,res){
 	var autos = [
 		{
@@ -128,7 +129,8 @@ app.get('/topten',function(req,res){
 			precio:190000,
 			mas_info:'http://www.chevrolet.com.mx/'
 		}
-	]
+	];
+	res.send(autos);
 });
 
 app.get('/bliss3',function(request, response){
