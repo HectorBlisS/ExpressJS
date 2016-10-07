@@ -5,9 +5,13 @@ var app = express();
 // 	response.send('hello Mijow');
 // });
 
+// app.get('/',function(request,response){
+// 	response.write('Perrow');
+// 	response.end();
+// });
+
 app.get('/',function(request,response){
-	response.write('Perrow');
-	response.end();
+	response.sendFile(__dirname+'/public/index.html');
 });
 
 app.get('/bliss',function(request, response){
@@ -33,5 +37,5 @@ app.get('/bliss3',function(request, response){
 
 
 app.listen(80, function(){
-	console.log('Escuchando en el puerto 3000');
+	console.log('Escuchando en el puerto 80');
 });
