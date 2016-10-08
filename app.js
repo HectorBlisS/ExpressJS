@@ -133,6 +133,20 @@ app.get('/topten',function(req,res){
 	res.send(autos);
 });
 
+app.get('/topten/1',function(req,res){
+	var auto = {
+			id:'10',
+			nombre:'Jetta',
+			desc:'2017 TM',
+			marca:'Volkswagen',
+			img:'http://shebuyscars.com/wp-content/uploads/2014/10/Jetta-15-TDI-S.png',
+			precio:229900,
+			mas_info:'http://www.vw.com.mx/es/models/jetta.html'
+		}
+		res.send(auto);
+
+});
+
 app.get('/bliss3',function(request, response){
 	response.redirect(301,'/perra');
 });
